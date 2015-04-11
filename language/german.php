@@ -23,11 +23,7 @@ if ( !defined('EQDKP_INC') ){
 	header('HTTP/1.0 404 Not Found');exit;
 }
 $german_array = array(
-	'races' => array(
-		0	=> 'Mensch',
-	),
-		
-	'classes' => array(
+	'races' => array(			//use for second Class
 		0	=> '',
 		1	=> 'Paladin',
 		2	=> 'Berserker',
@@ -43,7 +39,8 @@ $german_array = array(
 		12	=> 'Nekromant',
 		13	=> 'Kreuzritter',
 	),
-		'secondclass' => array(
+		
+	'classes' => array(
 		0	=> '',
 		1	=> 'Paladin',
 		2	=> 'Berserker',
@@ -188,9 +185,8 @@ $german_array = array(
 	'lang' => array(
 		'akd'						=> 'Aura Kingdom',
 		'uc_level'					=> 'Level',
-		'uc_race'					=> 'Rasse',
+		'uc_race'					=> 'Sekundär Klasse',
 		'uc_class'					=> 'Primär Klasse',
-		'uc_class2'					=> 'Sekundär Klasse',
 		'uc_eidolon'				=> '1. Eidolon',
 		'uc_eidolon2'				=> '2. Eidolon',
 		'uc_eidolon3'				=> '3. Eidolon',

@@ -29,7 +29,7 @@ if(!class_exists('akd')) {
 		public $version				= '0.0.1';
 		protected $this_game		= 'akd';
 		public $author				= "Anykan";
-		protected $types			= array('classes', 'secondclass', 'races', 'roles', 'eidolons','eidolons2','eidolons3',);						// which information are stored?
+		protected $types			= array('classes', 'races', 'roles', 'eidolons','eidolons2','eidolons3',);						// which information are stored?
 		protected $classes			= array();
 		protected $roles			= array();						// for each type there must be the according var
 		protected $factions			= array();						// and the according function: load_$type
@@ -40,13 +40,6 @@ if(!class_exists('akd')) {
 
 		protected $class_dependencies = array(
 			array(
-				'name'		=> 'race',
-				'type'		=> 'races',
-				'admin' 	=> false,
-				'decorate'	=> false,
-				'parent'	=> false,
-			),
-			array(
 				'name'		=> 'class',
 				'type'		=> 'classes',
 				'admin'		=> false,
@@ -56,32 +49,13 @@ if(!class_exists('akd')) {
 				'roster'	=> true,
 				'recruitment' => true,
 				'parent'	=> false,
-				),
+			),
 			array(
-				'name'		=> 'class2',
-				'type'		=> 'secondclass',
-				'admin'		=> false,
+				'name'		=> 'race',  // used for second class
+				'type'		=> 'races',
+				'admin' 	=> false,
 				'decorate'	=> false,
-				'roster'	=> true,
-				'recruitment' => true,
-				'parent'	=> array(
-						'class' => array(
-						0 	=> array(0),
-						1 	=> array(2,3,4,5,6,7,8,9,10,11,12,13),
-						2 	=> array(1,3,4,5,6,7,8,9,10,11,12,13),
-						3 	=> array(1,2,4,5,6,7,8,9,10,11,12,13),
-						4 	=> array(1,2,3,5,6,7,8,9,10,11,12,13),
-						5 	=> array(1,2,3,4,6,7,8,9,10,11,12,13),
-						6 	=> array(1,2,3,4,5,7,8,9,10,11,12,13),
-						7 	=> array(1,2,3,4,5,6,8,9,10,11,12,13),
-						8 	=> array(1,2,3,4,5,6,7,9,10,11,12,13),
-						9	=> array(1,2,3,4,5,6,7,8,10,11,12,13),
-						10	=> array(1,2,3,4,5,6,7,8,9,11,12,13),
-						11	=> array(1,2,3,4,5,6,7,8,9,10,12,13),
-						12	=> array(1,2,3,4,5,6,7,8,9,10,11,13),
-						13	=> array(1,2,3,4,5,6,7,8,9,10,11,12),
-					),
-				),
+				'parent'	=> false,
 			),
 			array(
 				'name'		=> 'eidolon',
